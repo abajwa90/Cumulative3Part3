@@ -1,0 +1,24 @@
+﻿@model MiniviableProject.Models.Teacher
+@{
+    ViewBag.Title = "Teacher Details";
+}
+
+<a href="/Teachers/List">Back</a>
+<div class="card mt-4 w-50">
+    <div class="card-body">
+        <h5 class="card-title">@Model.firstName @Model.lastName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Employee number: @Model.employeeNumber</h6>
+        <hr />
+        <p class="card-text">
+            @Model.firstName is a teacher that was hired on @Model.hireDate . The Salary for the teacher is $@Model.salary
+        </p>
+        <div class="mt-2 d-flex align-items-center justify-content-between">
+            <a href="/Teachers/Update/@Model.id" class="btn btn-sm btn-primary mt-2">Edit Teacher</a>
+            <a href="/Teachers/Courses/@Model.id" class="btn btn-sm btn-secondary mt-2">View Courses</a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <a href="/Teachers/Confirm/@Model.id" class="btn btn-sm btn-danger">Delete Teacher</a>
+</div>

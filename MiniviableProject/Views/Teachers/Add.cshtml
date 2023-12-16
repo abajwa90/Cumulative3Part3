@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Add New Teacher";
+}
+
+<div style="height: 600px" class="d-flex align-items-center justify-content-center">
+    <div class="card p-4">
+        <h5 class="card-title">Add Teacher</h5>
+        <div class="card-body">
+            <form id="addTeacherForm" name="addTeacherForm">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" style="min-width: 350px" placeholder="Enter teacher's first name">
+                    <div id="validFirstName" class="invalid-feedback d-none"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" style="min-width: 350px" placeholder="Enter teacher's last name">
+                    <div id="validLasttName" class="invalid-feedback d-none"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="employeeNumber" class="form-label">Employee Number</label>
+                    <input type="text" class="form-control" id="employeeNumber" name="employeeNumber" style="min-width: 350px" placeholder="Enter teacher's employee number">
+                    <div class="form-text">It should contain one Character and three numbers.</div>
+                    <div id="validEmployeeNumber" class="invalid-feedback d-none"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="number" class="form-control" id="salary" name="salary" style="min-width: 350px" placeholder="Enter teacher's salary">
+                    <div id="validSalary" class="invalid-feedback d-none"></div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4 px-4">Add Teacher</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/addTeachers.js"></script>

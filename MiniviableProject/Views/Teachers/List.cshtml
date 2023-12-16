@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MiniviableProject.Models.Teacher>
+@{
+    ViewBag.Title = "Teachers List";
+}
+
+<h3>Teachers List</h3>
+<hr />
+<div class="d-flex align-items-center mt-4">
+    <a href="/Teachers/Add" class="btn btn-lg btn-primary">Add Teacher</a>
+    <form class="d-flex align-items-center ms-auto" method="GET" action="/Teachers/List">
+        <input class="form-control-lg" name="searchKey" autocomplete="off" style="min-width: 600px; margin-right: 1em" type="search" placeholder="Search teachers" aria-label="Search">
+        <button class="btn btn-lg btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+<div class="card mt-5">
+    <div class="list-group list-group-flush">
+        @foreach (var teacher in Model)
+        {
+            <a href="/Teachers/Show/@teacher.id" class="list-group-item mt-2">
+                @teacher.firstName @teacher.lastName
+            </a>
+
+        }
+    </div>
+</div>
+
+
